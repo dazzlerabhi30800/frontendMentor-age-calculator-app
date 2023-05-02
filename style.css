@@ -26,7 +26,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--Light-grey);
+  background-color: var(--Off-white);
 }
 
 main {
@@ -39,8 +39,8 @@ main {
     var(--rounded-radius);
   padding: 1rem 2rem;
   box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.2);
-  min-width: 400px;
-  width: 60%;
+  min-width: 350px;
+  width: 80%;
   max-width: 700px;
 }
 
@@ -69,7 +69,7 @@ form {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--Smokey-grey);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
   transition: 0.3s linear;
 }
@@ -77,7 +77,7 @@ form {
   border: 1px solid var(--Smokey-grey);
   outline: none;
   padding: 8px 10px;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--Off-black);
   border-radius: 5px;
@@ -87,9 +87,10 @@ form {
 .input--container > input::placeholder {
   font-weight: 700;
   color: var(--Smokey-grey);
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .input--container > small {
+  font-size: .7rem;
   opacity: 0;
   transition: 0.3s linear;
 }
@@ -157,6 +158,8 @@ footer {
   bottom: 2%;
   left: 50%;
   transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: clamp(10px, 3vw, 14px);
 }
 
 @media Screen and (min-width: 950px) {
@@ -164,8 +167,18 @@ footer {
     gap: 1rem;
     width: 90%;
   }
-  .input--container .input--container > input {
+  .input--container > label {
+    font-size: 0.75rem;
+  }
+  .input--container > input {
     width: 60%;
+    font-size: 1.1rem;
+  }
+  .input--container > input::placeholder {
+    font-size: 1.2rem;
+  }
+  .input--container > small {
+    font-size: 1rem;
   }
   .submit--btn {
     left: initial;
@@ -173,4 +186,5 @@ footer {
     right: 2px;
     bottom: -18%;
   }
+  .
 }

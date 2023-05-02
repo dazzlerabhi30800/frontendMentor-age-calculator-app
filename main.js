@@ -16,6 +16,8 @@ var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 Form.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  // Day Input Handler
   if (
     dayInput.value.length > 2 ||
     dayInput.value.length < 1 ||
@@ -25,17 +27,23 @@ Form.addEventListener("submit", (e) => {
   } else {
     removeError(dayInput);
   }
-  if (
-    monthInput.value.length > 2 ||
-    monthInput.value.length < 1 ||
-    monthInput.value > 12
-  ) {
+
+  // Month Error Handler
+  if (monthInput.value.length > 2 || monthInput.value.length < 1) {
     showError(monthInput, "month is invalid");
+  } else if (monthInput.value > 12) {
+    showError(monthInput, "invalid month no");
   } else {
     removeError(monthInput);
   }
-  if (yearInput.value.length < 4 || yearInput.value > y2) {
+
+  // Year input Handler
+  if (yearInput.value.length < 4) {
     showError(yearInput, "year is invalid");
+  } else if (yearInput.value > y2) {
+    showError(yearInput, `Year is valid upto ${y2}`);
+  } else {
+    removeError(yearInput);
   }
 
   if (dayInput.value > d2) {
