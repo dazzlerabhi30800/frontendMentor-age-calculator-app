@@ -9,13 +9,14 @@ const months = document.querySelector(".months");
 const days = document.querySelector(".days");
 
 var date = new Date();
-var d2 = date.getDate();
-var m2 = 1 + date.getMonth();
-var y2 = date.getFullYear();
+var d2, m2, y2;
 var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 Form.addEventListener("submit", (e) => {
   e.preventDefault();
+  d2 = date.getDate();
+  m2 = 1 + date.getMonth();
+  y2 = date.getFullYear();
 
   // Day Input Handler
   if (
